@@ -1,9 +1,13 @@
-describe('Test for locators', () => {
+/// <reference types="Cypress" />
 
-  
+describe('Test for locators', () => {
+  // before('Navigate to test page', () => {
+  //   cy.visit('https://demoqa.com/text-box');
+  // });
+
   it('Verify FULL NAME field', () => {
-    cy.visit('https://demoqa.com/text-box');
-    //Get element 1
+    cy.visit('/text-box');
+    //Get element 1 variant
     cy.get("input[type='text']");
     //Get element, not the best way, but in case we have the same selectors for few elements it works
     cy.get("input[class*='form-control']").then((element) => {
@@ -15,6 +19,8 @@ describe('Test for locators', () => {
   });
 
   it('Verify Full Name, Email, Current Address, Permanent Address', () => {
+    // Another way if we have the same selectors without ids
+
     cy.get("[class*='form-control']")
       .should('be.visible')
       .and(($lis) => {

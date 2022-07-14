@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-   "scripts": {
+  "scripts": {
     "cypress-cli": "cypress open",
     "cypress-headed": "cypress run -b chrome",
     "cypress-headless": "cypress run --headless -b chrome",
